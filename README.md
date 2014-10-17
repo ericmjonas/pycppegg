@@ -6,3 +6,10 @@ and deploy an egg on EC2-spark
 3. Build the egg remotely
 4. launch the spark instance and test if your custom function does its thing
 
+
+
+
+Installation on osx with anaconda and a brew-based contemporary GCC
+
+CXX=g++-4.9 cmake -DCMAKE_INSTALL_PREFIX=$HOME/anaconda -DBOOST_ROOT=/Users/jonas/anaconda/
+
