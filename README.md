@@ -13,3 +13,5 @@ Installation on osx with anaconda and a brew-based contemporary GCC
 
 CXX=g++-4.9 cmake -DCMAKE_INSTALL_PREFIX=$HOME/anaconda -DBOOST_ROOT=/Users/jonas/anaconda/
 
+Then to do the egg
+
