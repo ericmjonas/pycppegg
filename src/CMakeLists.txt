@@ -55,22 +55,7 @@ message(STATUS "Installing python package to ${PYTHON_SITE_PACKAGES}")
 
 install(TARGETS pycpptest LIBRARY DESTINATION ${package_install_DIR})
 
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} DESTINATION ${package_install_DIR} FILES_MATCHING PATTERN "*.py")
-
-
-#FILE(GLOB_RECURSE py_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
-#    "${CMAKE_CURRENT_SOURCE_DIR}/*.py")
-
-#install(FILES ${py_files}
-#              DESTINATION ${package_install_DIR})
-
-
-# fixme make this recursive
-#FILE(GLOB_RECURSE py_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
-#   "${CMAKE_CURRENT_SOURCE_DIR}/subdir/*.py")
-
-#install(FILES ${py_files}
-#              DESTINATION ${package_install_DIR}/subdir)
-
-
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
+                  DESTINATION ${package_install_DIR}
+                  FILES_MATCHING PATTERN "*.py" PATTERN "build" EXCLUDE)
 
