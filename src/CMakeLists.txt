@@ -84,6 +84,6 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
 
 IF(CMAKE_BUILD_TYPE MATCHES EGG)
    install(CODE "MESSAGE(\"Sample install message.\")")
-   install(CODE "execute_process(COMMAND python ${CMAKE_SOURCE_DIR}/../buildegg.py ${CMAKE_SOURCE_DIR}/../EGG-INFO ${CMAKE_BINARY_DIR}/egg ${CMAKE_BINARY_DIR}/test.egg)")
+   install(CODE "execute_process(COMMAND python ${CMAKE_SOURCE_DIR}/../buildegg.py ${CMAKE_SOURCE_DIR}/../EGG-INFO ${CMAKE_BINARY_DIR}/egg ${CMAKE_BINARY_DIR}/${PACKAGE_NAME}.egg)")
 ENDIF(CMAKE_BUILD_TYPE MATCHES EGG)
     
